@@ -32,8 +32,8 @@ const Phone = ({ className, imgSrc, dark = false, ...props }: IPhoneProps) => {
           className="object-cover"
           src={imgSrc}
           alt="overlaying phone image"
-          width={300}
-          height={300}
+          width={600}
+          height={600}
         />
       </div>
     </div>
