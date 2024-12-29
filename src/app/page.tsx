@@ -1,6 +1,7 @@
 import { Icons } from "@/components/Icons";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Phone from "@/components/Phone";
+import { Reviews } from "@/components/Reviews";
 import { Check, Star } from "lucide-react";
 import Image from "next/image";
 
@@ -162,7 +163,7 @@ export default function Home() {
                   the design. Had the case for two and a half months now and the
                   image is super clear, on the case I had before, the image
                   started fading into yellow-ish color after a couple of weeks.
-                  Lot it.&ldquo;
+                  Love it.&ldquo;
                 </p>
               </div>
               <div className="flex gap-4 mt-2">
@@ -219,6 +220,9 @@ export default function Home() {
             </div>
           </div>
         </MaxWidthWrapper>
+        <div>
+          <Reviews />
+        </div>
       </section>
     </div>
   );
