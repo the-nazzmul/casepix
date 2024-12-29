@@ -1,5 +1,7 @@
 "use client";
 
+// TODO: Needs cleanup
+
 import Image from "next/image";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { HTMLAttributes, useEffect, useRef, useState } from "react";

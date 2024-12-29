@@ -5,6 +5,8 @@ import { Reviews } from "@/components/Reviews";
 import { Check, Star } from "lucide-react";
 import Image from "next/image";
 
+// Todo: Needs cleanup
+
 export default function Home() {
   return (
     <div className="bg-slate-50">
