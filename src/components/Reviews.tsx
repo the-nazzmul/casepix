@@ -168,7 +168,6 @@ export const Reviews = () => {
         height={150}
         alt="image"
       />
-
       <ReviewGrid />
     </MaxWidthWrapper>
   );
