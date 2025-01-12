@@ -26,34 +26,6 @@ export const MODELS = {
   name: "models",
   options: [
     {
-      label: "iPhone X",
-      value: "iPhonex",
-    },
-    {
-      label: "iPhone 11",
-      value: "iPhone11",
-    },
-    {
-      label: "iPhone 11 Pro",
-      value: "iPhone11pro",
-    },
-    {
-      label: "iPhone 11 Pro Max",
-      value: "iPhone11promax",
-    },
-    {
-      label: "iPhone 12",
-      value: "iPhone12",
-    },
-    {
-      label: "iPhone 12 Pro",
-      value: "iPhone12pro",
-    },
-    {
-      label: "iPhone 12 Pro Max",
-      value: "iPhone12promax",
-    },
-    {
       label: "iPhone 13",
       value: "iPhone13",
     },
