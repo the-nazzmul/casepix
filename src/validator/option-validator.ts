@@ -27,51 +27,51 @@ export const MODELS = {
   options: [
     {
       label: "iPhone 13",
-      value: "iPhone13",
+      value: "iphone13",
     },
     {
       label: "iPhone 13 Pro",
-      value: "iPhone13pro",
+      value: "iphone13pro",
     },
     {
       label: "iPhone 13 Pro Max",
-      value: "iPhone13promax",
+      value: "iphone13promax",
     },
     {
       label: "iPhone 14",
-      value: "iPhone14",
+      value: "iphone14",
     },
     {
       label: "iPhone 14 Pro",
-      value: "iPhone14pro",
+      value: "iphone14pro",
     },
     {
       label: "iPhone 14 Pro Max",
-      value: "iPhone14promax",
+      value: "iphone14promax",
     },
     {
       label: "iPhone 14",
-      value: "iPhone14",
+      value: "iphone14",
     },
     {
       label: "iPhone 14 Pro",
-      value: "iPhone14pro",
+      value: "iphone14pro",
     },
     {
       label: "iPhone 14 Pro Max",
-      value: "iPhone14promax",
+      value: "iphone14promax",
     },
     {
       label: "iPhone 15",
-      value: "iPhone15",
+      value: "iphone15",
     },
     {
       label: "iPhone 15 Pro",
-      value: "iPhone15pro",
+      value: "iphone15pro",
     },
     {
       label: "iPhone 15 Pro Max",
-      value: "iPhone15promax",
+      value: "iphone15promax",
     },
   ],
 } as const;

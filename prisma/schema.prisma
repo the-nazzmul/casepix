@@ -38,7 +38,7 @@ enum CaseFinish {
 enum CaseColor {
   black
   blue
-  maroon
+  rose
 }
 
 model Configuration {
