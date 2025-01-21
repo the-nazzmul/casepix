@@ -22,6 +22,8 @@ export const creatCheckoutSession = async ({
 
   const user = await getUser();
 
+  console.log(user.id);
+
   if (!user) {
     throw new Error("You need to be logged in");
   }
@@ -69,7 +71,7 @@ export const creatCheckoutSession = async ({
   const stripeSession = await stripe.checkout.sessions.create({
     success_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/thank-you?orderId=${order.id}`,
     cancel_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/configure/preview?id=${configuration.id}`,
-    payment_method_types: ["card", "paypal"],
+    payment_method_types: ["card"],
     mode: "payment",
     shipping_address_collection: { allowed_countries: ["US", "BD"] },
     metadata: {
