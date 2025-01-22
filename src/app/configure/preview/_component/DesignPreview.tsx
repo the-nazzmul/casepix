@@ -22,6 +22,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
   const router = useRouter();
   const { toast } = useToast();
   const { user } = useKindeBrowserClient();
+  const { id } = configuration;
 
   useEffect(() => setShowConfetti(true));
 
@@ -64,10 +65,10 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
   const handleCheckout = () => {
     if (user) {
       // create payment session
-      creatCheckoutSession({ configId: configuration.id });
+      creatCheckoutSession({ configId: id });
     } else {
       //need to log in
-      localStorage.setItem("configuratinId", configuration.id);
+      localStorage.setItem("configurationId", id);
       setIsLoginModalOpen(true);
     }
   };
