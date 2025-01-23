@@ -22,20 +22,20 @@ const Page = () => {
     queryFn: async () => await getAuthStatus(),
     retry: true,
     retryDelay: 500,
-    enabled: configId !== null,
   });
 
   useEffect(() => {
-    if (isFetched) {
-      if (data?.success) {
-        if (configId) {
-          localStorage.removeItem("configurationId");
-          router.push(`/configure/preview?id=${configId}`);
-        }
+    if (!isFetched) return;
+
+    if (data?.success) {
+      if (configId) {
+        localStorage.removeItem("configurationId");
+        router.push(`/configure/preview?id=${configId}`);
       } else {
-        console.log("No config");
         router.push("/");
       }
+    } else if (data !== undefined) {
+      router.push("/");
     }
   }, [data, configId, router, isFetched]);
 
