@@ -18,7 +18,7 @@ export default function Home() {
             <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="absolute w-36 left-0 -top-20 hidden lg:block">
                 <Image
-                  src="/casepix-1.png"
+                  src="/casepix-1.PNG"
                   alt="snake"
                   width={1470}
                   height={600}
@@ -145,7 +145,7 @@ export default function Home() {
               say
             </h2>
             <Image
-              src="/casepix-1.png"
+              src="/casepix-1.PNG"
               alt="logo"
               width={400}
               height={400}
@@ -294,7 +294,6 @@ export default function Home() {
           </ul>
         </MaxWidthWrapper>
       </section>
-      
     </div>
   );
 }

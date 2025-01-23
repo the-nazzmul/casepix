@@ -9,13 +9,13 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 const Navbar = async () => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
-  const isAdmin = user?.email === process.env.ADMIN_EMAIL
+  const isAdmin = user?.email === process.env.ADMIN_EMAIL;
   return (
     <nav className="sticky z-[100] h-14 inset-x-0 top-0 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link href="/" className="flex gap-1 z-40 font-semibold">
-            <Image src="/casepix-1.png" alt="logo" height={20} width={20} />
+            <Image src="/casepix-1.PNG" alt="logo" height={20} width={20} />
             <p className="text-2xl">
               Case<span className="text-green-600">Pix</span>
             </p>
@@ -35,7 +35,7 @@ const Navbar = async () => {
                     className={buttonVariants({ size: "sm", variant: "ghost" })}
                   >
                     <p>Dashboard</p>
-                    <LayoutDashboardIcon/>
+                    <LayoutDashboardIcon />
                   </Link>
                 ) : null}
                 <Link
