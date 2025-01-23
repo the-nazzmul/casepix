@@ -6,7 +6,7 @@ import { getAuthStatus } from "./action";
 import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 
-const Page = () => {
+const AuthCallbackPage = () => {
   const [configId, setConfigId] = useState<string | null>(null);
   const router = useRouter();
 
@@ -50,4 +50,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default AuthCallbackPage;
