@@ -17,21 +17,27 @@ const Page = () => {
     }
   }, []);
 
-  const { data } = useQuery({
+  const { data, isFetched } = useQuery({
     queryKey: ["auth-callback"],
     queryFn: async () => await getAuthStatus(),
     retry: true,
     retryDelay: 500,
+    enabled: configId !== null,
   });
 
-  if (data?.success) {
-    if (configId) {
-      localStorage.removeItem("configurationId");
-      router.push(`/configure/preview?id=${configId}`);
+  useEffect(() => {
+    if (isFetched) {
+      if (data?.success) {
+        if (configId) {
+          localStorage.removeItem("configurationId");
+          router.push(`/configure/preview?id=${configId}`);
+        }
+      } else {
+        console.log("No config");
+        router.push("/");
+      }
     }
-  } else {
-    router.push("/");
-  }
+  }, [data, configId, router, isFetched]);
 
   return (
     <div className="w-full mt-24 flex justify-center">
