@@ -1,9 +1,12 @@
 import {
   Card,
+  CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
 import { db } from "@/db";
 import { formatPrice } from "@/lib/utils";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
@@ -47,6 +50,8 @@ const DashboardPage = async () => {
     },
   });
 
+  const WEEKLY_GOAL = 500;
+
   return (
     <div className="flex max-h-screen w-full bg-muted/40">
       <div className="max-w-7xl w-full mx-auto flex flex-col sm:gap-4 sm:py-4">
@@ -59,6 +64,14 @@ const DashboardPage = async () => {
                   {formatPrice(lastWeekSum._sum.amount ?? 0)}
                 </CardTitle>
               </CardHeader>
+              <CardContent className="text-sm text-muted-foreground">
+                of {formatPrice(WEEKLY_GOAL)} goal
+              </CardContent>
+              <CardFooter>
+                <Progress
+                  value={((lastWeekSum._sum.amount ?? 0) * 100) / WEEKLY_GOAL}
+                />
+              </CardFooter>
             </Card>
           </div>
         </div>
