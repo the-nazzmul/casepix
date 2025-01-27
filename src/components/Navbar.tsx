@@ -28,12 +28,15 @@ const Navbar = async () => {
           <div className="h-full flex items-center space-x-4">
             {user ? (
               <>
-                <LogoutLink
-                  postLogoutRedirectURL="/auth-callback"
-                  className={buttonVariants({ size: "sm", variant: "ghost" })}
+                <Link
+                  href="/api/auth/logout"
+                  className={buttonVariants({
+                    size: "sm",
+                    variant: "ghost",
+                  })}
                 >
-                  Sign Out
-                </LogoutLink>
+                  Sign out
+                </Link>
                 {isAdmin ? (
                   <Link
                     href="/dashboard"
@@ -56,17 +59,6 @@ const Navbar = async () => {
               </>
             ) : (
               <>
-                <LoginLink
-                  postLoginRedirectURL="/auth-callback"
-                  className={buttonVariants({
-                    size: "sm",
-                    variant: "outline",
-                    className:
-                      "border-gray-300 hover:bg-primary hover:text-white",
-                  })}
-                >
-                  Sign up
-                </LoginLink>
                 <RegisterLink
                   postLoginRedirectURL="/auth-callback"
                   className={buttonVariants({
@@ -76,8 +68,20 @@ const Navbar = async () => {
                       "border-primary hover:bg-primary hover:text-white",
                   })}
                 >
-                  Sign In
+                  Sign up
                 </RegisterLink>
+                <LoginLink
+                  postLoginRedirectURL="/auth-callback"
+                  className={buttonVariants({
+                    size: "sm",
+                    variant: "outline",
+                    className:
+                      "border-gray-300 hover:bg-primary hover:text-white",
+                  })}
+                >
+                  Sign in
+                </LoginLink>
+
                 <div className="h-8 w-px bg-zinc-200 hidden sm:block" />
                 <Link
                   href="/configure/upload"
