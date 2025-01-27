@@ -28,15 +28,11 @@ const Navbar = async () => {
           <div className="h-full flex items-center space-x-4">
             {user ? (
               <>
-                <Link
-                  href="/api/auth/logout"
-                  className={buttonVariants({
-                    size: "sm",
-                    variant: "ghost",
-                  })}
+                <LogoutLink
+                  className={buttonVariants({ size: "sm", variant: "ghost" })}
                 >
-                  Sign out
-                </Link>
+                  Sign Out
+                </LogoutLink>
                 {isAdmin ? (
                   <Link
                     href="/dashboard"
@@ -60,7 +56,6 @@ const Navbar = async () => {
             ) : (
               <>
                 <RegisterLink
-                  postLoginRedirectURL="/auth-callback"
                   className={buttonVariants({
                     size: "sm",
                     variant: "outline",
@@ -71,7 +66,6 @@ const Navbar = async () => {
                   Sign up
                 </RegisterLink>
                 <LoginLink
-                  postLoginRedirectURL="/auth-callback"
                   className={buttonVariants({
                     size: "sm",
                     variant: "outline",
