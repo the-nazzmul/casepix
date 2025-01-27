@@ -4,7 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { buttonVariants } from "./ui/button";
 import { ArrowRight, LayoutDashboardIcon } from "lucide-react";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import {
+  getKindeServerSession,
+  LoginLink,
+  LogoutLink,
+  RegisterLink,
+} from "@kinde-oss/kinde-auth-nextjs/server";
 
 const Navbar = async () => {
   const { getUser } = getKindeServerSession();
@@ -23,12 +28,12 @@ const Navbar = async () => {
           <div className="h-full flex items-center space-x-4">
             {user ? (
               <>
-                <Link
-                  href="/api/auth/logout"
+                <LogoutLink
+                  postLogoutRedirectURL="/auth-callback"
                   className={buttonVariants({ size: "sm", variant: "ghost" })}
                 >
                   Sign Out
-                </Link>
+                </LogoutLink>
                 {isAdmin ? (
                   <Link
                     href="/dashboard"
@@ -51,8 +56,8 @@ const Navbar = async () => {
               </>
             ) : (
               <>
-                <Link
-                  href="/api/auth/register"
+                <LoginLink
+                  postLoginRedirectURL="/auth-callback"
                   className={buttonVariants({
                     size: "sm",
                     variant: "outline",
@@ -61,9 +66,9 @@ const Navbar = async () => {
                   })}
                 >
                   Sign up
-                </Link>
-                <Link
-                  href="/api/auth/login"
+                </LoginLink>
+                <RegisterLink
+                  postLoginRedirectURL="/auth-callback"
                   className={buttonVariants({
                     size: "sm",
                     variant: "outline",
@@ -72,7 +77,7 @@ const Navbar = async () => {
                   })}
                 >
                   Sign In
-                </Link>
+                </RegisterLink>
                 <div className="h-8 w-px bg-zinc-200 hidden sm:block" />
                 <Link
                   href="/configure/upload"
