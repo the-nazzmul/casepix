@@ -62,7 +62,7 @@ Once satisfied with their design, users can proceed to checkout after signing in
 1. **Clone the repository**
 
    ```sh
-   git clone https://github.com/yourusername/casepix.git
+   git clone https://github.com/the-nazzmul/casepix.git
    cd casepix
    ```
 
