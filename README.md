@@ -10,12 +10,12 @@ Once satisfied with their design, users can proceed to checkout after signing in
 
 ## 📖 Table of Contents
 
-- [Features](##features)
-- [Technology Stack](##technology-stack)
-- [Installation](##installation)
-- [Configuration (.env)](##configuration-env)
-- [Usage](##usage)
-- [Admin Dashboard](##admin-dashboard)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Installation](#installation)
+- [Configuration (.env)](#configuration-env)
+- [Usage](#usage)
+- [Admin Dashboard](#admin-dashboard)
 
 ---
 
