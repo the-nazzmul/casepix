@@ -12,6 +12,9 @@ const recursive = Recursive({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "CasePix",
   description: "Customize phone cases with your own image",
+  openGraph: {
+    images: [{ url: "/thumbnail.png" }],
+  },
 };
 
 export default function RootLayout({

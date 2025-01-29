@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CasePix
 
-## Getting Started
+![CasePix Banner](https://casepix.vercel.app/thumbnail.png)
 
-First, run the development server:
+**CasePix** is a sleek and intuitive e-commerce platform that allows users to design and purchase custom phone cases with their own images. The application provides a seamless design experience, enabling users to upload, position, and customize their images on a phone case without requiring authentication.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Once satisfied with their design, users can proceed to checkout after signing in, ensuring a smooth and uninterrupted experience. The platform integrates Stripe for secure payments and provides an admin dashboard for monitoring sales, order statuses, and business performance.
+
+🚀 **Live Demo:** [CasePix](https://casepix.vercel.app/)
+
+## 📖 Table of Contents
+
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Installation](#installation)
+- [Configuration (.env)](#configuration-env)
+- [Usage](#usage)
+- [Admin Dashboard](#admin-dashboard)
+
+---
+
+## ✨ Features
+
+- **Instant Customization** – Users can upload and position images without authentication.
+- **Drag & Drop Image Upload** – Powered by UploadThing for seamless file handling.
+- **Live Design Preview** – Resize, reposition, and adjust images in real time.
+- **Material & Finish Selection** – Choose from multiple phone models, materials, and finishes.
+- **Secure Authentication** – Implemented via KindeAuth.
+- **Persistent User Session** – Users are redirected back to their design after login/signup.
+- **Stripe Payment Integration** – Secure and smooth checkout process.
+- **Order Confirmation & Email** – Users receive an order summary with a visual mockup.
+- **Admin Dashboard** – Monitor sales performance, order status, and business metrics.
+- **Deployed on Vercel** – Ensuring high performance and scalability.
+
+---
+
+## 🛠️ Technology Stack
+
+| Category           | Technologies Used                                               |
+| ------------------ | --------------------------------------------------------------- |
+| **Frontend**       | Next.js, React, TypeScript, Tailwind CSS, ShadCN, Framer Motion |
+| **Backend**        | Next.js API Routes, Prisma, Zod                                 |
+| **Database**       | PostgreSQL (NeonDB)                                             |
+| **Authentication** | KindeAuth                                                       |
+| **File Uploads**   | UploadThing                                                     |
+| **Payments**       | Stripe                                                          |
+| **Email Service**  | Resend                                                          |
+| **Hosting**        | Vercel                                                          |
+
+---
+
+## 🛠 Installation
+
+### Prerequisites
+
+- **Node.js** (>= 18)
+- **PostgreSQL Database**
+- **Stripe Account**
+
+### Steps
+
+1. **Clone the repository**
+
+   ```sh
+   git clone https://github.com/yourusername/casepix.git
+   cd casepix
+   ```
+
+2. **Install dependencies**
+
+   ```sh
+   npm install
+   ```
+
+3. **Set up environment variables** (see `.env.example` below)
+
+4. **Generate Prisma client**
+
+   ```sh
+   npx prisma generate
+   ```
+
+5. **Run the development server**
+   ```sh
+   npm run dev
+   ```
+
+---
+
+## ⚙️ Configuration (.env)
+
+Create a `.env` file in the root directory and configure the following:
+
+```env
+# Kinde Authentication
+KINDE_CLIENT_ID=your_kinde_client_id
+KINDE_CLIENT_SECRET=your_kinde_client_secret
+KINDE_ISSUER_URL=your_kinde_issuer_url
+KINDE_SITE_URL=http://localhost:3000
+KINDE_POST_LOGOUT_REDIRECT_URL=http://localhost:3000
+KINDE_POST_LOGIN_REDIRECT_URL=http://localhost:3000/auth-callback
+
+# Admin Email
+ADMIN_EMAIL=your_admin_email@example.com
+
+# UploadThing API Keys
+UPLOADTHING_SECRET=your_uploadthing_secret
+UPLOADTHING_APP_ID=your_uploadthing_app_id
+
+# Database Configuration
+DATABASE_URL=your_postgresql_connection_url
+
+# Stripe API Keys
+STRIPE_SECRET_KEY=your_stripe_secret_key
+STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
+
+# Server Configuration
+NEXT_PUBLIC_SERVER_URL=http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🚨 **Important:** Never expose your `.env` file in public repositories. Use `.gitignore` to keep it secure.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Usage
 
-## Learn More
+1. **Start Designing** – Upload an image, position it on the phone case, and choose materials.
+2. **Review Design** – View a summary with pricing and specifications.
+3. **Login/Register** – Authenticate before proceeding to checkout.
+4. **Checkout** – Securely pay using Stripe.
+5. **Order Confirmation** – View a personalized mockup and receive an email confirmation.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📊 Admin Dashboard
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The admin panel provides:
 
-## Deploy on Vercel
+- **Sales Metrics** – Weekly and monthly goals tracking.
+- **Order Management** – View order statuses and customer details.
+- **Business Insights** – Monitor revenue and trends.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌍 Live Demo & Repository
+
+- **Live Site:** [CasePix](https://casepix.vercel.app/)
+- **GitHub Repository:** [GitHub Link](https://github.com/yourusername/casepix)
+
+---
+
+🚀 **Enjoy creating your custom phone cases with CasePix!** 🎨📱
