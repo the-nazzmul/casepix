@@ -13,7 +13,19 @@ export const metadata: Metadata = {
   title: "CasePix",
   description: "Customize phone cases with your own image",
   openGraph: {
-    images: [{ url: "/thumbnail.png" }],
+    title: "CasePix - Custom Phone Cases",
+    description: "Design your own phone case with your favorite images!",
+    url: "https://casepix.vercel.app/",
+    siteName: "CasePix",
+    images: [
+      {
+        url: "https://casepix.vercel.app/thumbnail.png", // Use absolute URL
+        width: 1200,
+        height: 630,
+        alt: "Custom phone case preview",
+      },
+    ],
+    type: "website",
   },
 };
 
